@@ -1,10 +1,10 @@
 <template>
-  <div>hahah</div>
+  <div>首页</div>
 </template>
 
 <script>
 export default {
-  name: "test",
+  name: "Home",
   components: {},
 };
 </script>
