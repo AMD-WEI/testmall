@@ -114,7 +114,7 @@
 import NavBar from "components/content/navbar/NavBar";
 import HomeSwiper from "./childComps/HomeSwiper.vue";
 
-import { getHomeMultidata } from "network/home";
+import { getHomeMultidata, getHomeGoods } from "network/home";
 import RecommendView from "./childComps/RecommendView.vue";
 import FeatureView from "views/home/childComps/FeatureView.vue";
 import TabControl from "components/content/tabControl/TabControl.vue";
@@ -134,7 +134,8 @@ export default {
     };
   },
   created() {
-    this.getHomeMultidata;
+    this.getHomeMultidata();
+    this.getHomeGoods("pop");
   },
   methods: {
     getHomeMultidata() {
@@ -143,8 +144,17 @@ export default {
         console.log(res);
         // this.banners = res.data.bannerManageList;
         // this.recommends = res.data.details;
+
+        //2.请求商品数据
         this.banners = res.data.banner_list;
         this.recommends = res.data.recommend_list;
+      });
+    },
+    getHomeGoods(type) {
+      const page = this.goods[type].page + 1;
+      getHomeGoods(type, page).then((res) => {
+        this.goods[type].list.push(...res.data.list);
+        this.goods[type].page += 1;
       });
     },
   },

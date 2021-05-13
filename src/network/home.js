@@ -7,3 +7,9 @@ export function getHomeMultidata() {
     url: "http://127.0.0.1:5000/index/banner"
   })
 }
+
+export function getHomeGoods() {
+  return request({
+    url: ""
+  })
+}
