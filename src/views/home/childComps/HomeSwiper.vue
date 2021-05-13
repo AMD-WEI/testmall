@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper>
+    <swiper class="swiper_1">
       <swiper-item v-for="(item, key) in banners" :key="key">
         <a href="">
           <!-- <img :src="item.photoPath" alt="" /> -->
@@ -29,4 +29,7 @@ export default {
 </script>
 
 <style>
+.swiper_1 {
+  padding-top: 4.4rem;
+}
 </style>
