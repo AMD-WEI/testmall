@@ -16,10 +16,15 @@ export default {
 <style>
 .nav-bar {
   display: flex;
-  line-height: 44px;
+  line-height: 4rem;
   text-align: center;
   box-shadow: 0 2px 2px rgb(100, 100, 100, 0.1);
   color: var(--color-background);
+}
+
+.nav-bar div {
+  font-size: 1.5rem;
+  position: relative;
 }
 
 .left,

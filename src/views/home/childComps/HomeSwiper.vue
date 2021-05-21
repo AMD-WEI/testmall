@@ -1,10 +1,9 @@
 <template>
   <div>
-    <swiper class="swiper_1">
+    <swiper class="swiper_1" v-if="banners.length">
       <swiper-item v-for="(item, key) in banners" :key="key">
         <a href="">
-          <!-- <img :src="item.photoPath" alt="" /> -->
-          <img :src="item.banner_url" alt="" />
+          <img :src="item.banner_url" alt="" @load="swiperImgHeight" />
         </a>
       </swiper-item>
     </swiper>
@@ -23,13 +22,23 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      isLoad: true,
+    };
+  },
   name: "HomeSwiper",
   components: { Swiper, SwiperItem },
+  methods: {
+    swiperImgHeight() {
+      if (this.isLoad) {
+        this.$emit("swiperImgHeight");
+        this.isLoad = false;
+      }
+    },
+  },
 };
 </script>
 
 <style>
-.swiper_1 {
-  padding-top: 4.4rem;
-}
 </style>

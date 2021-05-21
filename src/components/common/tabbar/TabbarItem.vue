@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     itemClick() {
-      console.log("itemClick");
       this.$router.replace(this.path).catch((err) => {});
     },
   },
@@ -42,11 +41,11 @@ export default {
 .tab-bar-item {
   flex: 1;
   text-align: center;
-  height: 49px;
+  padding: 0.5rem 0 0.5rem 0;
 }
 .tab-bar-item img {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   vertical-align: middle;
 }
 .active {

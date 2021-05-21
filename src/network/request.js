@@ -24,8 +24,11 @@ export function request(config) {
 
   //2.2.响应拦截
   instance.interceptors.response.use(res => {
-    //cnosole.log(res);
-    return res.data
+    // console.log("z：", res.status);
+    return {
+      success: res.status,
+      data: res.data
+    }
   }, error => {
     console.log(error);
   })

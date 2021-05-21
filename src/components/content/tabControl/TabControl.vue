@@ -28,10 +28,12 @@ export default {
         return [];
       },
     },
+    offsetTop: 0,
   },
   methods: {
     tab_control_click(key) {
       this.currentIndex = key;
+      this.$emit("tabClick", key);
     },
   },
 };
@@ -40,7 +42,7 @@ export default {
 <style>
 .tab-control {
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   height: 4rem;
   line-height: 4rem;

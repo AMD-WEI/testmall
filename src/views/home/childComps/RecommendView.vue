@@ -28,15 +28,17 @@ export default {
 .recommend {
   display: flex;
   text-align: center;
-  font-size: 1.3rem;
-  padding: 2rem 0 3rem;
+  font-size: 1rem;
+  padding: 1rem 0 2rem;
   border-bottom: 1rem solid #eee;
+  flex-wrap: wrap;
 }
 .recommend-item {
   flex: 1;
+  padding: 0.5rem 0 0.5rem 0;
 }
 .recommend-item img {
-  width: 4rem;
-  flex-wrap: nowrap;
+  width: 5rem;
+  padding: 0 1rem 0.2rem 1rem;
 }
 </style>

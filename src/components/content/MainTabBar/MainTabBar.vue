@@ -7,7 +7,7 @@
         src="~assets/img/tabbar/home-filling.svg"
         alt=""
       />
-      <div slot="item-text">首页</div>
+      <div slot="item-text" class="maintabbar-text">首页</div>
     </tabbar-item>
     <!-- <tabbar-item path="/category" activeColor="blue"> -->
     <tabbar-item path="/category">
@@ -17,7 +17,7 @@
         src="~assets/img/tabbar/modular-filling.svg"
         alt=""
       />
-      <div slot="item-text">分类</div>
+      <div slot="item-text" class="maintabbar-text">分类</div>
     </tabbar-item>
     <!-- <tabbar-item path="/cart" activeColor="blue"> -->
     <tabbar-item path="/cart">
@@ -27,7 +27,7 @@
         src="~assets/img/tabbar/Shopping-cart-filling.svg"
         alt=""
       />
-      <div slot="item-text">购物车</div>
+      <div slot="item-text" class="maintabbar-text">购物车</div>
     </tabbar-item>
     <tabbar-item path="/profile">
       <img slot="item-icon" src="~assets/img/tabbar/user.svg" alt="" />
@@ -36,7 +36,7 @@
         src="~assets/img/tabbar/user-filling.svg"
         alt=""
       />
-      <div slot="item-text">我的</div>
+      <div slot="item-text" class="maintabbar-text">我的</div>
     </tabbar-item>
   </tab-bar>
 </template>
@@ -50,5 +50,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.maintabbar-text {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
 </style>
