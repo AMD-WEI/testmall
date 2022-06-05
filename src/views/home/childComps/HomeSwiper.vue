@@ -41,4 +41,7 @@ export default {
 </script>
 
 <style>
+.swiper_1 {
+  padding-top: 4.4rem;
+}
 </style>
